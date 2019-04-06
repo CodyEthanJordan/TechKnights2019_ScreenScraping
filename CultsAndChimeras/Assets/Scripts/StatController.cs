@@ -8,9 +8,9 @@ namespace Assets.Scripts
     public class StatController : MonoBehaviour
     {
         private int _statValue = 0;
-        private int statValue
+        public int StatValue
         {
-            set
+            private set
             {
                 _statValue = value;
                 valueText.text = _statValue.ToString();
@@ -43,7 +43,7 @@ namespace Assets.Scripts
 
         public void Increase()
         {
-            if(statValue >= 18)
+            if(StatValue >= 18)
             {
                 return; //can't go above an 18
             }
@@ -54,23 +54,23 @@ namespace Assets.Scripts
             }
 
             cm.SpendPoint();
-            statValue += 1;
+            StatValue += 1;
         }
 
         public void Decrease()
         {
-            if(statValue <= 3)
+            if(StatValue <= 3)
             {
                 return; //minimum value is 3
             }
 
             cm.GainPoint();
-            statValue -= 1;
+            StatValue -= 1;
         }
 
         public void SetValue(int val)
         {
-            statValue = val;
+            StatValue = val;
         }
     }
 }

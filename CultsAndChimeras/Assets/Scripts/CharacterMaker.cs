@@ -60,21 +60,31 @@ namespace Assets.Scripts
         private void Start()
         {
             RollStats();
+            StoreStats();
         }
 
         public void StoreStats()
         {
-
+            storedStats = Stats.Select(s => s.StatValue).ToList();
         }
 
         public void RecallStats()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < Stats.Count; i++)
+            {
+                Stats[i].SetValue(storedStats[i]);
+            }
+            UnspentPoints = 0;
+        }
+
+        public void PlayGame()
+        {
+
         }
 
         private void Update()
         {
-            if(Input.GetKeyUp(KeyCode.Escape))
+            if(Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.Q))
             {
                 Application.Quit();
             }
