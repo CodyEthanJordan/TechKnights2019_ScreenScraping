@@ -7,9 +7,22 @@ namespace Assets.Scripts
 {
     public class StatController : MonoBehaviour
     {
-        private int value = 0;
+        private int _statValue = 0;
+        private int statValue
+        {
+            set
+            {
+                _statValue = value;
+                valueText.text = _statValue.ToString();
+            }
+            get
+            {
+                return _statValue;
+            }
+        }
 
         [SerializeField] private Text valueText;
+        [SerializeField] private CharacterMaker cm;
 
         private void Awake()
         {
@@ -30,18 +43,34 @@ namespace Assets.Scripts
 
         public void Increase()
         {
-            if(value >= 18)
+            if(statValue >= 18)
             {
-                return;
+                return; //can't go above an 18
             }
 
+            if(cm.UnspentPoints <= 0)
+            {
+                return; //can't spend points you don't have
+            }
 
+            cm.SpendPoint();
+            statValue += 1;
+        }
+
+        public void Decrease()
+        {
+            if(statValue <= 3)
+            {
+                return; //minimum value is 3
+            }
+
+            cm.GainPoint();
+            statValue -= 1;
         }
 
         public void SetValue(int val)
         {
-            value = val;
-            valueText.text = value.ToString();
+            statValue = val;
         }
     }
 }

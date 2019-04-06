@@ -864,6 +864,11 @@ Prefab:
       propertyPath: m_Text
       value: Paranoia
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
@@ -1073,6 +1078,11 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 82.13
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
@@ -1087,7 +1097,7 @@ GameObject:
   - component: {fileID: 778489222}
   - component: {fileID: 778489221}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Unspent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,6 +1581,11 @@ Prefab:
       propertyPath: m_Text
       value: Sass
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
@@ -1877,6 +1892,11 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 76.02
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
@@ -1914,6 +1934,7 @@ MonoBehaviour:
   - {fileID: 1486247225}
   - {fileID: 1136066193}
   - {fileID: 802881016}
+  UnspentPointsText: {fileID: 778489221}
 --- !u!4 &1560355057
 Transform:
   m_ObjectHideFlags: 0
@@ -2048,6 +2069,11 @@ Prefab:
       propertyPath: m_Text
       value: Chutzpah
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
@@ -2159,6 +2185,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114677203309334282, guid: a4d8a84103d36d64a9e98004fe02c70b,
+        type: 2}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1560355056}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d8a84103d36d64a9e98004fe02c70b, type: 2}
   m_IsPrefabAsset: 0
