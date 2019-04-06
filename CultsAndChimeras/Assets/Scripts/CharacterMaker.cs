@@ -23,17 +23,21 @@ namespace Assets.Scripts
         }
 
         [SerializeField] private Text UnspentPointsText;
+        [SerializeField] private Image GameScreen;
+        [SerializeField] private Text StatDescriptionText;
 
         private List<int> storedStats = new List<int>();
 
-        public void SpendPoint()
+        public void SpendPoint(StatController stat)
         {
             UnspentPoints -= 1;
+            StatDescriptionText.text = stat.Description;
         }
 
-        public void GainPoint()
+        public void GainPoint(StatController stat)
         {
             UnspentPoints += 1;
+            StatDescriptionText.text = stat.Description;
         }
 
         public void RollStats()
@@ -61,6 +65,7 @@ namespace Assets.Scripts
         {
             RollStats();
             StoreStats();
+            StatDescriptionText.text = "";
         }
 
         public void StoreStats()
@@ -79,7 +84,7 @@ namespace Assets.Scripts
 
         public void PlayGame()
         {
-
+            GameScreen.gameObject.SetActive(true);
         }
 
         private void Update()

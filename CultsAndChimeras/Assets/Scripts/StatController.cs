@@ -7,6 +7,8 @@ namespace Assets.Scripts
 {
     public class StatController : MonoBehaviour
     {
+        public string Description;
+
         private int _statValue = 0;
         public int StatValue
         {
@@ -53,7 +55,7 @@ namespace Assets.Scripts
                 return; //can't spend points you don't have
             }
 
-            cm.SpendPoint();
+            cm.SpendPoint(this);
             StatValue += 1;
         }
 
@@ -64,7 +66,7 @@ namespace Assets.Scripts
                 return; //minimum value is 3
             }
 
-            cm.GainPoint();
+            cm.GainPoint(this);
             StatValue -= 1;
         }
 
