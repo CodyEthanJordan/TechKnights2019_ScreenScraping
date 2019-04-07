@@ -56,7 +56,7 @@ namespace Assets.Scripts
             int total = 0;
             for (int i = 0; i < x; i++)
             {
-                total += UnityEngine.Random.Range(1, y);
+                total += UnityEngine.Random.Range(1, y+1);
             }
             return total;
         }
